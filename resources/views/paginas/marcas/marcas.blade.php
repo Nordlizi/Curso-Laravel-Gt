@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Cartera de Clientes de Global Target
+  Elegidos por las mejores marcas del mundo; Absolut, Audi, BMW, Carolina Herrera, Chivas, Givenchy, Gucci, Jeep, Marc Jacobs, Ralph Lauren, Ray-Ban, Versace, Victoria's Secret ...entre otras.
 @stop
 
 @section('MetaRobot')
@@ -92,7 +92,7 @@
    
 
       
-
+      @if($Marcas->hasPages())            
       <!-- pagination MUTEADO por ahora-->
       <div class="col-xs-12 special-col">
           <div class="pagination-block">
@@ -100,6 +100,7 @@
           </div>
       </div>
       <!-- /pagination -->
+      @endif
 
 
     </div>

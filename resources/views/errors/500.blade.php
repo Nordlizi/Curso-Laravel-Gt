@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="iPad-Retina.png">  
     <link rel="apple-touch-icon" sizes="167x167" href="iPad-Pro.png">
 
-    <title>{{$Empresa->name}} - Error 503</title>
+    <title>{{$Empresa->name}} - Error 500</title>
     <meta name="Description" CONTENT="@yield('MetaContent')">
 
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/app.css') }}">   
@@ -41,9 +41,9 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
                     <div class="center-content-flex-vertical">
-                        <h1><span class="double-size-font">ERROR 503</span></H1>
-                        <h2>Servidor momentáneamente ocupado</h2>
-                        <h3>El servidor está bajo mantenimiento, vuelve a intentarlo luego.</h3>
+                        <h1><span class="double-size-font">ERROR 500</span></H1>
+                        <h2>Internal Server Error</h2>
+                        <h3>Algo ha sucedido mal, espera unos minutos y vuelve a intentarlo.</h3>
                         <h4>- Atte., el equipo de Global Target.</h4>
                         <div class="center-content-flex">
                 <img src="imagenes/Empresa/logo-gt.png">

@@ -53,7 +53,8 @@ class Paginas_Controller extends Controller
     public function get_pagina_marcas(Request $Request)
     {
 
-        $Marcas =  $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20  );
+        $Marcas          =   $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20);
+        $Marcas_buscador =   $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamenteSinPaginacion();
 
         $Marca = '';
 
@@ -74,15 +75,19 @@ class Paginas_Controller extends Controller
         //cosnultar las demas
 
 
-        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca'));
+        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca','Marcas_buscador'));
     }
         //pagina de la marca individual
         public function get_pagina_marca_individual($name,$id,Request $Request)
         {
             $Marca   = $this->MarcaRepo->find($id);
 
-            //le envio los eventos de esa marca
-            $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',5);    
+            //le envio los eventos de esa marca    
+            $Eventos_id = $this->Marca_de_eventoRepo->getEventosDeEstaMarcaActivosYPaginados('marca_id',$id,'desc',10,$Request);  
+
+            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($Eventos_id,10);
+
+           
 
             $Empresa = $this->EmpresaRepo->getEmpresaDatos();       
            

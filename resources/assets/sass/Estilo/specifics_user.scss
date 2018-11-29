@@ -163,36 +163,51 @@ escritura de código)---*/
   height: 120px;
   width: auto;
 }
-
-#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+#section0 .bg-home-header .home-header-container{
   position: absolute;
+  bottom: 0vh;
+  width: 100%;
+}
+#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+  position: relative;
   font-family: Champagne;
   font-size: 50px;
   letter-spacing: 4px;
   color: $color-3;
   text-align: center;
-  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-shadow: 2px 2px 5px rgba(0,0,0, 0.5);
+}
+#section0 .bg-home-header .home-header-container:hover .home-header-frase h1 {
+ color: $color-3superlight;
+}
+@media (max-width:992px) {#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+  font-size: 30px;
+  }
+  #section0 .bg-home-header .home-header-container{
+    bottom: 10vh;}
+}
+#section1 .bg-home-service .home-header-frase h1{
+  font-size: 30px;
+  font-family: Champagne;
+  text-align: center;
+  color: $color-3;
   left: 0;
   right: 0;
   margin: 0 auto;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-#section0 .bg-home-header .home-header-container:hover .home-header-frase h1 {
- color: $color-3superlight;
-}
-@media (max-width:767px) {#section0 .bg-home-header .home-header-container .home-header-frase h1 {
-font-size: 30px;
-bottom: none;
-top: 70vw;
-}}
 
 #section0 .bg-home-header .home-header-container .arrow-container{
   width: 100%;
 }
 #section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down{
-  position: absolute;
-  bottom: 80px;
+  position: relative;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -203,9 +218,7 @@ top: 70vw;
 #section0 .bg-home-header .home-header-container:hover .arrow-container .my-arrow-down{
   border-color: $color-3superlight transparent transparent transparent;
   }
-@media (max-width:767px) {#section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down {
-  bottom: none;
-  top: 85vw;
+@media (max-width:992px) {#section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down {
   border-width: 15px 15px 0 15px;
 }}
 
@@ -378,6 +391,33 @@ img.marca-col{
 }
 .servicios-logo-ampro img{
 }
+#servicios #servicios-intro .special-col{
+  background-color: rgba(0,0,0, 0.3) !important;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#servicios #servicios-intro .special-col:hover{
+  background-color: rgba(0,0,0, 0.5) !important;
+}
+#servicios #servicios-intro .special-col a h4{
+  color: $color-3superlight !important;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#servicios #servicios-intro .special-col:hover a h4{
+  color: $color-3superlight !important;
+  letter-spacing: 6px !important;
+}
+#servicios #servicios-intro{
+  padding-top: 300px;
+  height: 70vh;
+}
+@media (max-width: 991px){
+  #servicios #servicios-intro{
+  padding-top: 100px;
+  height: auto;
+}}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -543,6 +583,33 @@ img.marca-col{
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled {
   border-color:$color-3superlight;
 }
+
+
+.contacto-header-comunicate-new,
+.contacto-header-siguenos-new{
+  padding: 20px;
+  border: 2px solid $color-3;
+  border-radius: 10px;
+  background-color: rgba(0,0,0, 0.3);
+  height: 320px;
+  margin-top: 20px;
+}
+.contacto-header-comunicate-new h2,
+.contacto-header-siguenos-new h2{
+  color: $color-3superlight;
+}
+.contacto-header-comunicate-new h4,
+.contacto-header-siguenos-new h4{
+  color: $color-3light;
+}
+
+@media (max-width: 991px){
+  .contacto-header-comunicate-new,
+  .contacto-header-siguenos-new{
+    height: auto;
+    margin-top: 20px;}
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -670,3 +737,78 @@ right: 0;
 .pagination-block ul.pagination li:hover a{
   background-color: $color-3superlight;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+
+/*---         E R R O R  '   s   ---*/
+/*--- personalizando las páginas de errores 404, 503, etc. ---*/
+
+.bg-error {
+  background: $color-2;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  margin-top: $navbar-altura * -1;
+}
+@media (max-width:767px) {.bg-error{    margin-top:$navbar-altura-xs * -1; }}
+.bg-error h1{
+  color: $color-3light !important;
+  text-align: center;
+}
+.bg-error h2{
+  color: $color-3 !important;
+  text-align: center;
+}
+.bg-error h3{
+  color: $color-2light !important;
+  text-align: center;
+}
+.bg-error h4{
+  color: $color-2light !important;
+  text-align: center;
+}
+
+.bg-error .ampliar {
+  color: $color-3dark;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform:uppercase;
+}
+.bg-error .quote {
+  color:$color-3dark;
+}
+.bg-error .quote:before{
+  color:$color-3light;
+}
+.bg-error .quote:after{
+  color:$color-3light;
+}
+.bg-error .ampliar:hover {
+  color: $color-3;
+}
+.bg-error .ampliar span.glyphicon{
+  color: $color-3light;
+}
+.double-size-font{
+  font-size: 200%;
+}

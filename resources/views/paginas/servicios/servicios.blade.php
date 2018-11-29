@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Servicios - Personal, Entrenamiento y Organización | Global Target
+  Eventos y promociones. Personal de la más alta calidad en azafatas, modelos, promotoras, maquilladoras y bartenders.
 @stop
 
 @section('MetaRobot')
@@ -21,14 +21,16 @@
 <div id="servicios">
     
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-white">
+<div class="container-fluid section-wrapper no-padding bg-color-white">
 
+
+<div class="container-fluid section-wrapper no-padding bg-servicios-header">
   <div class="row" id="servicios-intro">
 
     <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
       <!--<h1 class="section-title text-center">Servicios</h1>-->
       <!--<h2 class="section-subtitle text-center">Ofrecemos soluciones adaptadas a las necesidades de cada cliente.</h2>-->
-      <div class="non-semantic-protector">
+      <div class="super-space-top non-semantic-protector">
         <h1 class="ribbon"> 
           <!--<span class="ribbon-contenido">Superar sus expectativas es nuestro objetivo principal.</span>-->
           <span class="ribbon-contenido">Ofrecemos soluciones adaptadas a sus necesidades.</span>
@@ -55,15 +57,15 @@
     </div>
 
   </div>
+</div>
 
 
-
-
+<!--
   <div>
     <img class="img-responsive hidden-xs" src="imagenes/Img/bg-servicios-chicas.jpg">
     <img class="img-responsive visible-xs" src="imagenes/Img/bg-servicios-chicas(responsive).jpg">
   </div>
-
+-->
 
 
   <div class="row hr-border-top-pegado">
@@ -167,7 +169,7 @@
                     <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>En proceso de certificación de calidad</h4>
                     <div class="row space-top">
                       <div class="col-xs-4 col-xs-push-4 servicios-logo-ampro">
-                        <a href="http://amprouruguay.com.uy/"><img class="img-responsive center-block mi-float-up" src="imagenes/Empresa/ampro_seal_color3dark.png" title="Asociación de Marketing Promocional del Uruguay"></a>
+                        <a href="http://amprouruguay.com.uy/"><img class="img-responsive center-block" src="imagenes/Empresa/ampro_asociado_globaltarget.png" title="Asociación de Marketing Promocional del Uruguay"></a>
                       </div>
                     </div>      
                   </div>
